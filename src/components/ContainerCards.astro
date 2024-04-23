@@ -1,38 +1,30 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 
+
 const CARDS =[
 {
     img:"/public/DevFinder.png",
     title:"Dev finder",
-    languageUno:"html",
-    languageDos:"css ",
-    languageTres:"js",
-    description:"Este proyecto es un buscador de perfiles de GitHub que permite a los usuarios buscar y visualizar perfiles de otros usuarios de GitHub. Los usuarios pueden ingresar el nombre de usuario de GitHub de la persona que desean buscar y obtener información detallada sobre ese perfil.",
-    vercel:"https://dev-finder-diegojq.vercel.app/",
-    github:"https://github.com/Diegojq/dev-finder",
+    description:"Este proyecto es un buscador de perfiles de GitHub ",
+    view:"https://dev-finder-diegojq.vercel.app/",
+    viewCode:"https://github.com/Diegojq/dev-finder",
 
 },
 {
     img:"/public/SocialLinks.png",
     title:"social links profile",
-    languageUno:"html",
-    languageDos:"css ",
-    languageTres:"js",
-    description:"este es un proyecto para compartir todos tus perfiles sociales. El cual te permite ingreasr a todas tus redes sociales",
-    vercel:"https://social-links-nine.vercel.app/",
-    github:"https://github.com/Diegojq/social-links",
+    description:"este es un proyecto para compartir todos tus perfiles sociales.",
+    view:"https://social-links-nine.vercel.app/",
+    viewCode:"https://github.com/Diegojq/social-links",
 
 },
 {
     img:"/public/AgeCalculator.png",
     title:"age calculator",
-    languageUno:"html",
-    languageDos:"css ",
-    languageTres:"js",
-    description:"Este proyecto es una calculadora de edad que permite al usuario ingresar su fecha de nacimiento y devuelve su edad en años, meses y días.",
-    vercel:"https://new-age-ten.vercel.app/",
-    github:"https://github.com/Diegojq/age-calculator",
+    description:"Este proyecto es una calculadora de edad",
+    view:"https://new-age-ten.vercel.app/",
+    viewCode:"https://github.com/Diegojq/age-calculator",
 
 }
 
@@ -40,8 +32,8 @@ const CARDS =[
 ---
 
 
-<div class="flex gap-2">
-    {
+<div class="grid grid-cols-2 gap-4 ">
+   {
         CARDS.map(cards =>(
             <ProjectCard {...cards}/>
         ))
