@@ -31,7 +31,7 @@ const { description ,title} = Astro.props;
 	}
 	html {
 		font-family: "Onest Variable",system-ui, sans-serif;
-
+		scroll-bahaivor:smooth;
 	}
 
 	body{
@@ -41,5 +41,9 @@ const { description ,title} = Astro.props;
 		flex-direction: column;
 		margin: 0 auto;
 
+	}
+
+	@media(prefers-reduced-motion: reduce ){
+		scroll-behavior: auto;
 	}
 </style>
