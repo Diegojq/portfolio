@@ -8,6 +8,10 @@ import Email from "../icons/Email.astro";
 import Experiencie from "../components/Experiencie.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../icons/Briefcase.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+import User from "../icons/User.astro";
 ---
 
 <Layout
@@ -15,9 +19,10 @@ import Briefcase from "../icons/Briefcase.astro";
   description="contrata a Diego Jimenez para crear tu aplicación web o móvil. Desarrollador web. Especializado en crear aplicaciones únicas"
 >
   <main>
-    <SectionContainer class="py-16 pb-16">
+    <SectionContainer id="home" class="py-16 pb-16">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4">
-        Hey, soy Diego jimenez <div class="flex items-center">
+        <span class="opacity-90 text-yellow-200/90">Hey,</span> soy Diego Jimenez
+        <div class="flex items-center">
           <a class="flex" href="https://www.linkedin.com/in/diegojq/"
             ><Badge>Disponible para trabajar</Badge></a
           >
@@ -47,9 +52,26 @@ import Briefcase from "../icons/Briefcase.astro";
     </SectionContainer>
     <SectionContainer id="experiencie">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-2">
-        <Briefcase class="size-8"/>
-        Experiencia laboral</h2>
-      <Experiencie/>
+        <Briefcase class="size-8" />
+        Experiencia laboral
+      </h2>
+      <Experiencie />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2">
+        <CodeIcon class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2">
+        <User class="size-8" />
+        Sobre mi
+      </h2>
+      <Footer />
     </SectionContainer>
   </main>
 </Layout>
