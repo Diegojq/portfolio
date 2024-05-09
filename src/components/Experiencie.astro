@@ -1,30 +1,29 @@
 ---
-import ExperiencieItem from "./ExperiencieItem.astro"
+import ExperiencieItem from "./ExperiencieItem.astro";
 
 const EXPERIENCIE = [
-{
+  {
     date: "Actualmente",
     title: "Desarollador frontend",
-    description: "desarrollador frontend freelance apasionado por crear experiencias digitales cautivadoras. Me encanta convertir diseños creativos en interfaces interactivas y funcionales que sorprendan a mis clientes. Mi objetivo es ofrecer soluciones web personalizadas y de alta calidad que satisfagan las necesidades y superen las expectativas de quienes confían en mí para llevar sus proyectos al siguiente nivel.",
-    link: "#"
-},
+    description: "descripcion de experiencia",
+    link: "#",
+  },
 
-{
+  {
     date: "septiembre 2023",
     title: "Principal Frontend Engineer",
-    description: "Responsable de la plataforma, componentes y utilidades para la creacion y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software.",
-    link: "#"
-},
-
-]
+    description: " descripcion de experiencia experiencia",
+    link: "#",
+  },
+];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700"> 
-    {
-        EXPERIENCIE.map(experiencie =>(           <li class="mb-10 ms-4">
-                <ExperiencieItem {... experiencie} />
-            </li>
-        ))
-    }           
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperiencieItem {...experiencie} />
+      </li>
+    ))
+  }
 </ol>
-
