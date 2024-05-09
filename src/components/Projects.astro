@@ -1,0 +1,79 @@
+---
+import SocialPill from "../components/SocialPill.astro";
+
+const TAGS = {
+  HTML: {
+    name: "Html",
+    class: "bg-black text-white",
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+  },
+  CSS: {
+    name: "Css",
+    class: "bg-[#003159] text-white",
+  },
+};
+
+const PROJECTS = [
+  {
+    title: `Dev Finder`,
+    description: `Este proyecto es un buscador de perfiles de GitHub que permite buscar y visualizar perfiles de otros usuarios de GitHub. Los usuarios pueden ingresar el nombre de usuario de GitHub de la persona que desean buscar y obtener información detallada sobre ese perfil.`,
+    link: `https://dev-finder-diegojq.vercel.app/`,
+    github: `#`,
+    image: `/projects/devfinder.png`,
+    tags: [TAGS.HTML, TAGS.TAILWIND],
+  },
+  {
+    title: `Age Calculator`,
+    description: `Este proyecto es una calculadora de edad que permite al usuario ingresar su fecha de nacimiento y devuelve su edad en años, meses y días.`,
+    link: `#`,
+    github: `#`,
+    image: `/projects/agecalculator.png`,
+    tags: [TAGS.HTML, TAGS.TAILWIND],
+  },
+  {
+    title: `link tree`,
+    description: `Este proyecto es un único enlace para reunir todos tus enlaces. Simplifica el acceso a tus redes sociales.`,
+    link: `#`,
+    github: `#`,
+    image: `/projects/linktree.png`,
+    tags: [TAGS.HTML, TAGS.TAILWIND],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, link, github, tags }) => (
+    <article class="flex mb-8">
+      <img
+        class="rounded shadow-2xl shadow-white/10 h-[236px] w-[430px] object-contain"
+        src={image}
+        alt={`captura de pantalla del proyecto`}
+      />
+      <div class="ml-8 flex flex-col justify-center">
+        <h3 class="text-2xl font-semibold text-yellow-200 mb-1 ">{title}</h3>
+        <ul class="flex flex-row gap-x-2 mb-1">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2  `}
+              >
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-md text-pretty mb-2">{description}</p>
+
+        <ul>
+          <li class="flex gap-x-2 ">
+            <SocialPill href={link}>Preview</SocialPill>
+            <SocialPill href={github}>Code</SocialPill>
+          </li>
+        </ul>
+      </div>
+    </article>
+  ))
+}
