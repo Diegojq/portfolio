@@ -1,0 +1,43 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+
+const CARDS =[
+{
+    img:"/public/DevFinder.png",
+    title:"Dev finder",
+    description:"Este proyecto es un buscador de perfiles de GitHub ",
+    view:"https://dev-finder-diegojq.vercel.app/",
+    viewCode:"https://github.com/Diegojq/dev-finder",
+
+},
+{
+    img:"/public/SocialLinks.png",
+    title:"social links profile",
+    description:"este es un proyecto para compartir todos tus perfiles sociales.",
+    view:"https://social-links-nine.vercel.app/",
+    viewCode:"https://github.com/Diegojq/social-links",
+
+},
+{
+    img:"/public/AgeCalculator.png",
+    title:"age calculator",
+    description:"Este proyecto es una calculadora de edad",
+    view:"https://new-age-ten.vercel.app/",
+    viewCode:"https://github.com/Diegojq/age-calculator",
+
+}
+
+]
+---
+
+
+<div class="grid grid-cols-2 gap-16 ">
+   {
+        CARDS.map(cards =>(
+            <ProjectCard {...cards}/>
+        ))
+    }
+</div>
+
+

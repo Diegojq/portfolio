@@ -1,0 +1,45 @@
+---
+import { Picture } from "astro:assets";
+import SocialPill from "./SocialPill.astro";
+
+export interface props {
+  img?:string
+  title:string
+  description:string
+  view:string
+  viewCode:string
+}
+
+const {img, title, description, view, viewCode }= Astro.props
+---
+
+<div
+  class="relative grid text-center h-[30rem]  w-[14rem] lg:w-full items-end justify-center overflow-hidden rounded-xl "
+>
+<!--   <Picture
+    class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none "
+    alt="Esta es una descripcion"
+    src={img}
+  /> -->
+  <img class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none" src={img} alt="">
+
+  <div class="relative px-6 py-14 to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50">
+    <h2
+      class="mb-6 font-sans text-4xl font-medium leading-[1.5] text-white "
+    >
+      {title}
+    </h2>
+    <h5
+      class="block mb-4 font-sans text-xl  font-semibold leading-snug text-gray-400"
+    >
+      {description}
+    </h5>
+    
+    <SocialPill href={view} className="mb-2">
+      Ver
+    </SocialPill>
+    <SocialPill href={viewCode}>
+      Ver codigo
+    </SocialPill>
+  </div>
+</div>
